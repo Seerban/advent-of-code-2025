@@ -10,7 +10,7 @@ public class solution_p2 {
         List<Integer> maxidx = new ArrayList<>(Collections.nCopies(12, -1));
         maxidx.set(0, 0);
 
-        // Get maximum from start to length-12 as biggest digit matters most
+        // Get maximum from start to length-12 as biggest digit matters most, all next batteries will be to the right of this one
         for(int i = 0; i < s.length - 11; ++i)
             if(s[i] > s[maxidx.get(0)])
                 maxidx.set(0, i);
@@ -23,22 +23,12 @@ public class solution_p2 {
                 break;
             }
             
-            // If found, look for max on right side (pick last index if max repeats)
-            // we don't want to select from the tail of the list until necessary so we only until (batteryCount - 12 + batteries added)
             if(maxidx.get(i+1) >= 0)
                 for(int j = maxidx.get(i); j < s.length - (10 - i); ++j) {
                     if(maxidx.contains(j)) continue; // skip if already used battery
                     if(s[maxidx.get(i+1)] < s[j]) {
                         maxidx.set(i+1, j);
                     }
-                }
-
-            // if not found, guaranteed to be on left side
-            if(maxidx.get(i+1) == -1)
-                for(int j = 0; j < maxidx.get(i); ++j) {
-                    if(maxidx.contains(j)) continue; // skip if already used battery
-                    if(maxidx.get(i+1) < s[j])
-                        maxidx.set(i+1, j);
                 }
         }
 
