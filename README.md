@@ -14,3 +14,7 @@
 **(Java) Day 3 - Lobby:** Biggest number from n ordered digits.
 
 &nbsp;&nbsp;[Problem](https://adventofcode.com/2025/day/3) ||| [Solution](./Day3)
+
+**(Go) Day 4 - Printing Department:** Count removable objects from grid with < 4 neighbours.
+
+&nbsp;&nbsp;[Problem](https://adventofcode.com/2025/day/4) ||| [Solution](./Day4)
