@@ -18,3 +18,7 @@
 **(Go) Day 4 - Printing Department:** Count removable objects from grid with < 4 neighbours.
 
 &nbsp;&nbsp;[Problem](https://adventofcode.com/2025/day/4) ||| [Solution](./Day4)
+
+**(JS) Day 5 - Cafeteria:** Get area in intersecting intervals.
+
+&nbsp;&nbsp;[Problem](https://adventofcode.com/2025/day/5) ||| [Solution](./Day5)
