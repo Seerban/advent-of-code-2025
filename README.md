@@ -22,3 +22,7 @@
 **(JS) Day 5 - Cafeteria:** Get area in intersecting intervals.
 
 &nbsp;&nbsp;[Problem](https://adventofcode.com/2025/day/5) ||| [Solution](./Day5)
+
+**(C) Day 6 - Trash Compactor:** File parsing order problem.
+
+&nbsp;&nbsp;[Problem](https://adventofcode.com/2025/day/6) ||| [Solution (only part1)](./Day6)
