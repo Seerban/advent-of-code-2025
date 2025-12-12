@@ -25,4 +25,4 @@
 
 **(C) Day 6 - Trash Compactor:** File parsing order problem.
 
-&nbsp;&nbsp;[Problem](https://adventofcode.com/2025/day/6) ||| [Solution (only part1)](./Day6)
+&nbsp;&nbsp;[Problem](https://adventofcode.com/2025/day/6) ||| [Solution](./Day6)

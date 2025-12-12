@@ -2,15 +2,16 @@
 #include <string.h>
 #include <stdlib.h>
 
-// will give wrong answer if not enough space
 #define BUF_SIZE 5000
 #define MAX_NUMS_COL 1000
 #define MAX_NUMS_ROW 20
 
+// solution stores entire input as char** but could be optimized with fseek
+
 int main() {
     FILE *f = fopen("input.txt", "r");
     char buf[BUF_SIZE];
-    int nums[MAX_NUMS_ROW][MAX_NUMS_COL];
+    int nums[MAX_NUMS_ROW][MAX_NUMS_COL]; // store numbers & operation as 0(addition) or 1(multiply)
 
     // READ file into nums
     int row = 0;
@@ -38,7 +39,6 @@ int main() {
     for(int i = 0; i < col; ++i) {
         int addition = nums[row-1][i] == 0;
 
-        // initialize 0 for sum and 1 for mult
         long long col_sum = addition ? 0 : 1;
 
         for(int j = 0; j < row-1; ++j)
@@ -46,11 +46,10 @@ int main() {
             else col_sum *= nums[j][i];
 
         sum += col_sum;
-        printf("Step %d : %lld\n", i, sum);
     }
 
+    fclose(f);
     printf("%lld", sum);
 
-    fclose(f);
     return 0;
 }
